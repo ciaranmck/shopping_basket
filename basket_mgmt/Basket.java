@@ -11,7 +11,7 @@ public class Basket {
     this.contents = new ArrayList<Buyable>();
   }
 
-  public double getSize() {
+  public int getSize() {
     return this.contents.size();
   }
 

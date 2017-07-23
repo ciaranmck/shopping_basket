@@ -13,7 +13,7 @@ public class BasketTest {
 
   @Test
   public void testBasketHasSize() {
-    assertEquals(0, basket.getSize(), .01);
+    assertEquals(0, basket.getSize());
   }
 
 }
