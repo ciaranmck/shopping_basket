@@ -25,4 +25,15 @@ public class BasketTest {
     assertEquals(1, basket.getSize());
   }
 
+  @Test
+  public void testCanRemoveFirstProductFromBasket() {
+    Food food = new Food("Oranges", .20);
+
+    basket.addProductToBasket(food);
+    assertEquals(1, basket.getSize());
+
+    basket.removeProductFromBasket();
+    assertEquals(0, basket.getSize());
+  }
+
 }

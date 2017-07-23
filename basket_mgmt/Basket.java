@@ -19,4 +19,8 @@ public class Basket {
     this.contents.add(product);
   }
 
+  public void removeProductFromBasket() {
+    this.contents.remove(0);
+  }
+
 }
