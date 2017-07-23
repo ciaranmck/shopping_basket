@@ -8,12 +8,17 @@ public class ClothesTest {
 
   @Before
   public void before() {
-    clothes = new Clothes("Jeans");
+    clothes = new Clothes("Jeans", 50);
   }
 
   @Test
   public void testClothesHaveType() {
     assertEquals("Jeans", clothes.getType());
+  }
+
+  @Test
+  public void testClothesHaveCostPrice() {
+    assertEquals(50, clothes.getCostPrice());
   }
 
   // @Test

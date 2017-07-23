@@ -5,8 +5,8 @@ public class Clothes extends Product implements Buyable {
 
   private String size;
 
-  public Clothes(String type) {
-    super(type);
+  public Clothes(String type, int costPrice) {
+    super(type, costPrice);
     this.size = size;
   }
 

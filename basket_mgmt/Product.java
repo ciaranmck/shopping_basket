@@ -5,7 +5,7 @@ public abstract class Product {
   private String type;
   private int costPrice;
 
-  public Product(String type) {
+  public Product(String type, int costPrice) {
     this.type = type;
     this.costPrice = costPrice;
   }
