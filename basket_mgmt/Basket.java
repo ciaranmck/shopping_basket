@@ -19,15 +19,17 @@ public class Basket {
     this.contents.add(product);
   }
 
-  public void removeProductFromBasket() {
-    this.contents.remove(0);
+  public void removeProductFromBasket(int index) {
+    this.contents.remove(index);
   }
 
   public void emptyBasket() {
     int length = getSize();
     for (int i = 0; i < length; i++) {
-      removeProductFromBasket();
+      removeProductFromBasket(0);
     }
   }
+
+
 
 }
