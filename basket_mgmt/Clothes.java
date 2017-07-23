@@ -5,7 +5,7 @@ public class Clothes extends Product implements Buyable {
 
   private String size;
 
-  public Clothes(String type, int costPrice) {
+  public Clothes(String type, double costPrice) {
     super(type, costPrice);
     this.size = size;
   }
@@ -14,9 +14,9 @@ public class Clothes extends Product implements Buyable {
     return this.size;
   }
 
-  // public int calculateSellPrice(int markup) {
-  //   int sellPrice = clothes.getCostPrice() * markup;
-  //   return sellPrice;
-  // }
+  public double calculateSellPrice(double percentage) {
+    double markup = getCostPrice() / 100 * percentage;
+    return markup + getCostPrice();
+  }
 
 }

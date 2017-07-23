@@ -18,12 +18,12 @@ public class ClothesTest {
 
   @Test
   public void testClothesHaveCostPrice() {
-    assertEquals(50, clothes.getCostPrice());
+    assertEquals(50, clothes.getCostPrice(), .01);
   }
 
-  // @Test
-  // public void testClothesHaveSellPrice() {
-  //   assertEquals(110, jeans.calculateSellPrice());
-  // }
+  @Test
+  public void testClothesHaveSellPrice() {
+    assertEquals(55, clothes.calculateSellPrice(10), .01);
+  }
 
 }

@@ -3,9 +3,9 @@ package basket_mgmt;
 public abstract class Product {
 
   private String type;
-  private int costPrice;
+  private double costPrice;
 
-  public Product(String type, int costPrice) {
+  public Product(String type, double costPrice) {
     this.type = type;
     this.costPrice = costPrice;
   }
@@ -14,7 +14,7 @@ public abstract class Product {
     return this.type;
   }
 
-  public int getCostPrice() {
+  public double getCostPrice() {
     return this.costPrice;
   }
 
