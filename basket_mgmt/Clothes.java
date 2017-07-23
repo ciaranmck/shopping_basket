@@ -5,8 +5,8 @@ public class Clothes extends Product implements Buyable {
 
   private String size;
 
-  public Clothes(String type, double costPrice, String size) {
-    super(type, costPrice);
+  public Clothes(String type, double costPrice, double sellPrice, String size) {
+    super(type, costPrice, sellPrice);
     this.size = size;
   }
 
@@ -14,9 +14,11 @@ public class Clothes extends Product implements Buyable {
     return this.size;
   }
 
-  public double calculateSellPrice(double percentage) {
-    double markup = getCostPrice() / 100 * percentage;
-    return markup + getCostPrice();
-  }
+  // public double calculateSellPrice(double percentage) {
+  //   double markup = getCostPrice() / 100 * percentage;
+  //   double sellingPrice = markup + getCostPrice();
+  //   setSellPrice(sellingPrice);
+  //   return sellingPrice; 
+  // }
 
 }

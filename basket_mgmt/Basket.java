@@ -5,17 +5,17 @@ import java.util.ArrayList;
 
 public class Basket {
 
-  private ArrayList<Buyable> contents;
+  private ArrayList<Product> contents;
 
   public Basket() {
-    this.contents = new ArrayList<Buyable>();
+    this.contents = new ArrayList<Product>();
   }
 
   public int getSize() {
     return this.contents.size();
   }
 
-  public void addProductToBasket(Buyable product) {
+  public void addProductToBasket(Product product) {
     this.contents.add(product);
   }
 
@@ -28,6 +28,14 @@ public class Basket {
     for (int i = 0; i < length; i++) {
       removeProductFromBasket(0);
     }
+  }
+
+  public double getTotalValueOfBasket() {
+    double totalValue = 0;
+    for (Product product : contents) {
+      totalValue += product.getSellPrice() ;
+    }
+    return totalValue;
   }
 
 

@@ -8,7 +8,7 @@ public class FoodTest {
 
   @Before
   public void before() {
-    food = new Food("Pasta", .5);
+    food = new Food("Pasta", .5, .6);
   }
 
   @Test
@@ -23,7 +23,7 @@ public class FoodTest {
 
   @Test
   public void testFoodHaveSellPrice() {
-    assertEquals(.6, food.calculateSellPrice(20), .01);
+    assertEquals(.6, food.getSellPrice(), .01);
   }
 
 }

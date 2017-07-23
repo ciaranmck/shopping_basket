@@ -2,5 +2,5 @@ package behaviours;
 
 public interface Buyable {
 
-  double calculateSellPrice(double percentage);
+  // double calculateSellPrice(double percentage);
 }
