@@ -36,4 +36,19 @@ public class BasketTest {
     assertEquals(0, basket.getSize());
   }
 
+  @Test
+  public void testCanEmptyBasket() {
+    Food orange = new Food("Orange", .20);
+    basket.addProductToBasket(orange);
+    Food apple = new Food("Apple", .30);
+    basket.addProductToBasket(apple);
+    Clothes shirt = new Clothes("Shirt", 20, "S");
+    basket.addProductToBasket(shirt);
+
+    assertEquals(3, basket.getSize());
+
+    basket.emptyBasket();
+    assertEquals(0, basket.getSize());
+  }
+
 }

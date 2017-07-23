@@ -23,4 +23,11 @@ public class Basket {
     this.contents.remove(0);
   }
 
+  public void emptyBasket() {
+    int length = getSize();
+    for (int i = 0; i < length; i++) {
+      removeProductFromBasket();
+    }
+  }
+
 }
