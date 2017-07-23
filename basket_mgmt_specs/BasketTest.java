@@ -16,4 +16,13 @@ public class BasketTest {
     assertEquals(0, basket.getSize());
   }
 
+  @Test
+  public void testCanAddProductToBasket() {
+    Food food = new Food("Oranges", .20);
+
+    basket.addProductToBasket(food);
+
+    assertEquals(1, basket.getSize());
+  }
+
 }

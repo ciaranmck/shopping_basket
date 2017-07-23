@@ -15,4 +15,8 @@ public class Basket {
     return this.contents.size();
   }
 
+  public void addProductToBasket(Buyable product) {
+    this.contents.add(product);
+  }
+
 }
