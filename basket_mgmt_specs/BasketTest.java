@@ -8,7 +8,7 @@ public class BasketTest {
 
   @Before
   public void before() {
-    basket = new Basket();
+    basket = new Basket(true);
   }
 
   @Test
@@ -75,6 +75,18 @@ public class BasketTest {
     basket.addProductToBasket(shirt);
 
     assertEquals(36.63, basket.discountItems(), .01);
+  }
+
+  @Test
+  public void testLoyaltyCardDiscount() {
+    Food orange = new Food("Orange", .20, .30);
+    basket.addProductToBasket(orange);
+    Food apple = new Food("Apple", .30, .40);
+    basket.addProductToBasket(apple);
+    Clothes shirt = new Clothes("Shirt", 20, 40, "S");
+    basket.addProductToBasket(shirt);
+
+    assertEquals(39.88, basket.loyaltyCardDiscount(), .01);
   }
 
 }

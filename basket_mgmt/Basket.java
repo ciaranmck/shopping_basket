@@ -6,9 +6,11 @@ import java.util.ArrayList;
 public class Basket {
 
   private ArrayList<Product> contents;
+  private Boolean loyaltyCard;
 
-  public Basket() {
+  public Basket(Boolean loyaltyCard) {
     this.contents = new ArrayList<Product>();
+    this.loyaltyCard = loyaltyCard;
   }
 
   public int getSize() {
@@ -47,5 +49,15 @@ public class Basket {
       }
       return discountedTotal; 
     }
+
+  public double loyaltyCardDiscount() {
+    double totalValue = getTotalValueOfBasket();
+    double discountedTotal = 0;
+
+    if (loyaltyCard = true) {
+      discountedTotal = totalValue - (totalValue * .02);
+    }
+    return discountedTotal;
+  }
 
   }
