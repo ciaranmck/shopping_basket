@@ -65,4 +65,16 @@ public class BasketTest {
     assertEquals(40.70, basket.getTotalValueOfBasket(), .01); 
   }
 
+  @Test
+  public void testCanDiscountBasket() {
+    Food orange = new Food("Orange", .20, .30);
+    basket.addProductToBasket(orange);
+    Food apple = new Food("Apple", .30, .40);
+    basket.addProductToBasket(apple);
+    Clothes shirt = new Clothes("Shirt", 20, 40, "S");
+    basket.addProductToBasket(shirt);
+
+    assertEquals(36.63, basket.discountItems(), .01);
+  }
+
 }

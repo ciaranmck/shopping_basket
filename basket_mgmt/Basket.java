@@ -38,6 +38,14 @@ public class Basket {
     return totalValue;
   }
 
+  public double discountItems() {
+    double totalValue = getTotalValueOfBasket();
+    double discountedTotal = 0;
 
+    if (totalValue >= 20) {
+      discountedTotal = totalValue - (totalValue * .10);
+      }
+      return discountedTotal; 
+    }
 
-}
+  }
